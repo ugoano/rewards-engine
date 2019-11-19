@@ -1,7 +1,7 @@
 VENV ?= ./.virtualenv
 
 test:
-	$(VENV)/bin/python3 -m unittest
+	$(VENV)/bin/python3 -m pytest
 
 install:
 	python3 -m venv $(VENV) && \
@@ -15,3 +15,6 @@ sales:
 
 rewards:
 	$(VENV)/bin/python3 src/rewards_service.py
+
+recommendations:
+	$(VENV)/bin/python3 src/recommendations_service.py
